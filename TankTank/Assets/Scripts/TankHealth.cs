@@ -22,7 +22,6 @@ public class TankHealth : MonoBehaviour
 
 
 
-    // Start is called before the first frame update
     private void Awake()
     {
         m_ExplotionParticles = Instantiate(m_ExplotionPrefab).GetComponent<ParticleSystem>();

@@ -16,17 +16,18 @@ public class ShellExplotion : MonoBehaviour
 
     private void Start()
     {
-        Destroy(gameObject, m_MaxLifeTime);  
+        //Destroy(gameObject, m_MaxLifeTime);  
     }
 
     // Update is called once per frame
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Saw collider");
         Vector3 HitLocation = transform.position;
 
         HitLocation.z = 0;
 
-        Collider[] colliders = Physics.OverlapSphere(HitLocation, m_ExplotionRadius, m_TankMask);
+        Collider[] colliders = Physics.OverlapSphere(HitLocation, m_ExplotionRadius);
 
 
         for (int i = 0; i < colliders.Length; i++)

@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.4117647}
+  m_Color: {r: 0.38875046, g: 0.9056604, b: 0.41834393, a: 0.5058824}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 0
+  m_FillAmount: 0.66
   m_FillClockwise: 0
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -294,7 +294,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 66
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -400,6 +400,7 @@ GameObject:
   - component: {fileID: 2592836716973719132}
   - component: {fileID: 1971696111358645925}
   - component: {fileID: 1666404744}
+  - component: {fileID: 999776092}
   m_Layer: 8
   m_Name: Tank
   m_TagString: Untagged
@@ -733,6 +734,24 @@ MonoBehaviour:
   m_EngineIdlying: {fileID: 8300000, guid: 2c608a1902e32ba44a1e4cf245b104ee, type: 3}
   m_EngineDriving: {fileID: 8300000, guid: 494cb7fed386a004e9dd351bd6586b76, type: 3}
   m_PitchRange: 0.2
+--- !u!114 &999776092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7131138312563747313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cd8b4768115062499433819317346ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StartingHealth: 100
+  m_Slider: {fileID: 1379895862}
+  m_FillImage: {fileID: 1233153452}
+  m_FullHealthColor: {r: 0, g: 1, b: 0, a: 1}
+  m_ZeroHealthColor: {r: 1, g: 0, b: 0, a: 1}
+  m_ExplotionPrefab: {fileID: 0}
 --- !u!1001 &1010429868637784902
 PrefabInstance:
   m_ObjectHideFlags: 0
