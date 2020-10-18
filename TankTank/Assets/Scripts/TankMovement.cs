@@ -54,7 +54,6 @@ public class TankMovement : MonoBehaviour
     {
         m_MovenentInptValue = Input.GetAxis(m_MovementAxisName);
         m_TurnInputValue = Input.GetAxis(m_TurnAxisName);
-
         EngineAudio();
     }
 
@@ -67,7 +66,7 @@ public class TankMovement : MonoBehaviour
             if(m_MovementAudio.clip== m_EngineDriving)
             {
                 m_MovementAudio.clip = m_EngineIdlying;
-                m_MovementAudio.pitch = 0.4f;
+                m_MovementAudio.pitch = Random.Range(m_OriginalPitch - m_PitchRange, m_OriginalPitch + m_PitchRange);
                 m_MovementAudio.Play();
 
             }
@@ -77,15 +76,11 @@ public class TankMovement : MonoBehaviour
             if (m_MovementAudio.clip == m_EngineIdlying)
             {
                 m_MovementAudio.clip = m_EngineDriving;
-                m_MovementAudio.pitch = 0.4f*Random.Range(m_OriginalPitch - m_PitchRange, m_OriginalPitch + m_PitchRange);
+                m_MovementAudio.pitch = Random.Range(m_OriginalPitch - m_PitchRange, m_OriginalPitch + m_PitchRange);
                 m_MovementAudio.Play();
 
             }
-            else
-            {
-                //m_MovementAudio.clip = m_EngineIdlying;
-                //m_MovementAudio.Play();
-            }
+
             
 
         }
@@ -112,7 +107,7 @@ public class TankMovement : MonoBehaviour
         float turn = m_TurnInputValue * m_TurnSpeed * Time.fixedDeltaTime;
         //Quaternion turnRotation = Quaternion.Euler(0f, 0f, turn);
         m_rigidbody.MoveRotation(m_rigidbody.rotation+ turn);
-        Debug.Log(turn);
+        //Debug.Log(turn);
     }
 
 
