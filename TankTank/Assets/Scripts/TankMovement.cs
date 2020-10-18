@@ -53,7 +53,7 @@ public class TankMovement : MonoBehaviour
     private void Update()
     {
         m_MovenentInptValue = Input.GetAxis(m_MovementAxisName);
-        m_TurnInputValue = -1f*Input.GetAxis(m_TurnAxisName);
+        m_TurnInputValue = Input.GetAxis(m_TurnAxisName);
 
         EngineAudio();
     }
