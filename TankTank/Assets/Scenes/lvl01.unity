@@ -352,6 +352,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b77ecb1f92a7474daf001ba5eff51bd, type: 3}
+--- !u!1 &1666404743 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7131138312563747313, guid: 47de179dff35a1f4cbd13a9bb26c8ae9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1010429869332817400}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1666404744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666404743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e028be4d60ffe464ea43324135453dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TankNumber: 1
+  m_Speed: 3
+  m_TurnSpeed: 40
+  m_MovementAudio: {fileID: 1666404746}
+  m_EngineIdlying: {fileID: 8300000, guid: 2c608a1902e32ba44a1e4cf245b104ee, type: 3}
+  m_EngineDriving: {fileID: 8300000, guid: 494cb7fed386a004e9dd351bd6586b76, type: 3}
+  m_PitchRange: 0.2
+--- !u!82 &1666404746 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2592836716973719132, guid: 47de179dff35a1f4cbd13a9bb26c8ae9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1010429869332817400}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1990160062
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ public class CameraControl : MonoBehaviour
 {
     public float m_DampTime = 0.2f;
     public float m_ScreenEdgeBuffer = 4f;
-    public float m_MinSize = 8f;
+    public float m_MinSize = 5f;
     public Transform[] m_Targets;
 
     private Camera m_Camera;
@@ -60,7 +60,7 @@ public class CameraControl : MonoBehaviour
             averagePos.z = transform.position.z;
             m_DesiredPosition = averagePos;
         }
-        Debug.Log(m_DesiredPosition);
+        //Debug.Log(m_DesiredPosition);
     }
 
     private void Zoom()
