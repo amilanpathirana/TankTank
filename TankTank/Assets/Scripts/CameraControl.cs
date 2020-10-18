@@ -60,7 +60,7 @@ public class CameraControl : MonoBehaviour
             averagePos.z = transform.position.z;
             m_DesiredPosition = averagePos;
         }
-        //Debug.Log(m_DesiredPosition);
+
     }
 
     private void Zoom()
