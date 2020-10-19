@@ -9,7 +9,7 @@ public class TankShooting : MonoBehaviour
     public int m_PlayerNumber = 1;
     public Rigidbody2D m_Shell;
     public Transform m_FireTrransform;
-    public Slider m_AimSlider;
+    //public Slider m_AimSlider;
     public AudioSource m_ShootingAudio;
     public AudioClip m_ChargingClip;
     public AudioClip m_FireClip;
@@ -31,7 +31,7 @@ public class TankShooting : MonoBehaviour
     {
         Fire();
         m_CrrentLanchForce = m_MinLaunchForce;
-        m_AimSlider.value = m_MinLaunchForce;
+        //m_AimSlider.value = m_MinLaunchForce;
     }
 
     // Update is called once per frame
@@ -41,14 +41,14 @@ public class TankShooting : MonoBehaviour
 
 
         m_FireButton = "Fire" + m_PlayerNumber;
-        m_ChargeSpeed = (m_MinLaunchForce - m_MaxLaunchForce) / m_MaxChargeTime;
+        m_ChargeSpeed = (m_MaxLaunchForce - m_MinLaunchForce) / m_MaxChargeTime;
     }
 
     private void Update()
 
     {
 
-        m_AimSlider.value = m_MinLaunchForce;
+        //m_AimSlider.value = m_MinLaunchForce;
 
         if(m_CrrentLanchForce>= m_MaxLaunchForce && !m_Fired)
         {
@@ -64,10 +64,10 @@ public class TankShooting : MonoBehaviour
             m_ShootingAudio.Play();
 
         }
-        else if (Input.GetButtonDown(m_FireButton) && !m_Fired)
+        else if (Input.GetButton(m_FireButton) && !m_Fired)
         {
             m_CrrentLanchForce += m_ChargeSpeed * Time.deltaTime;
-            m_AimSlider.value = m_CrrentLanchForce;
+           // m_AimSlider.value = m_CrrentLanchForce;
         }
         else if(Input.GetButtonUp(m_FireButton)&& !m_Fired)
         {
@@ -88,8 +88,14 @@ public class TankShooting : MonoBehaviour
         m_ShootingAudio.clip = m_FireClip;
         m_ShootingAudio.Play();
         m_CrrentLanchForce = m_MinLaunchForce;
+        StartCoroutine(waiter_not_that_waiter_just_waiter());
     }
 
+    IEnumerator waiter_not_that_waiter_just_waiter()
+    {
+        yield return new WaitForSeconds(1000000000000);
+        //my code here after 3 seconds
+    }
 
 
 }
