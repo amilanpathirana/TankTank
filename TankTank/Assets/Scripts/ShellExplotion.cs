@@ -23,11 +23,12 @@ public class ShellExplotion : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Saw collider");
-        Vector3 HitLocation = transform.position;
+        Vector2 HitLocation;
 
-        HitLocation.z = 0;
+        HitLocation.x = transform.position.x;
+        HitLocation.y = transform.position.y;
 
-        Collider[] colliders = Physics.OverlapSphere(HitLocation, m_ExplotionRadius);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(HitLocation, m_ExplotionRadius);
 
 
         for (int i = 0; i < colliders.Length; i++)

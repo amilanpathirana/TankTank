@@ -29,7 +29,7 @@ public class TankShooting : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
-        Fire();
+        ///Fire();
         m_CrrentLanchForce = m_MinLaunchForce;
         //m_AimSlider.value = m_MinLaunchForce;
     }
@@ -56,7 +56,7 @@ public class TankShooting : MonoBehaviour
             Fire();
 
         }
-        else if (Input.GetButtonDown(m_FireButton))
+        else if (Input.GetButtonDown(m_FireButton) && m_Fired)
         {
             m_Fired = false;
             m_CrrentLanchForce = m_MinLaunchForce;
@@ -88,14 +88,14 @@ public class TankShooting : MonoBehaviour
         m_ShootingAudio.clip = m_FireClip;
         m_ShootingAudio.Play();
         m_CrrentLanchForce = m_MinLaunchForce;
-        StartCoroutine(waiter_not_that_waiter_just_waiter());
+        //StartCoroutine(waiter_not_that_waiter_just_waiter());
     }
 
-    IEnumerator waiter_not_that_waiter_just_waiter()
+    /*IEnumerator waiter_not_that_waiter_just_waiter()
     {
         yield return new WaitForSeconds(1000000000000);
         //my code here after 3 seconds
     }
 
-
+    */
 }
