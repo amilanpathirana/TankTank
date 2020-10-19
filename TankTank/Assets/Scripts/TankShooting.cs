@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TankShooting : MonoBehaviour
 {
 
-    public int m_PlayerNumber = 1;
+    public int m_TankNumber = 1;
     public Rigidbody2D m_Shell;
     public Transform m_FireTrransform;
     //public Slider m_AimSlider;
@@ -40,7 +40,7 @@ public class TankShooting : MonoBehaviour
 
 
 
-        m_FireButton = "Fire" + m_PlayerNumber;
+        m_FireButton = "Fire" + m_TankNumber;
         m_ChargeSpeed = (m_MaxLaunchForce - m_MinLaunchForce) / m_MaxChargeTime;
     }
 
