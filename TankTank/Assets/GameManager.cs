@@ -1,18 +1,42 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
 
-[Serializable]
-public class GameManager 
+
+public class GameManager:MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int m_NumRoundsToWin = 5;
+    public float m_StartDelay = 5f;
+    public float m_EndDelay = 3f;
+    public CameraControl m_CameraControl;
+    public Text m_MessageText;
+    public GameObject m_TankPrefab;
+    public TankManager[] m_Tanks;
+
+    private int m_RoundNumber;
+    private WaitForSeconds m_StartWait;
+    private WaitForSeconds m_EndWait;
+    private TankManager m_RoundWinner;
+    private TankManager m_GameWinner;
+
+
+    private void Start()
     {
-        
+        m_StartWait = new WaitForSeconds(m_StartDelay);
+        m_EndWait = new WaitForSeconds(m_EndDelay);
+
+        SpawnAllTanks();
+        //SetCameraTargets();
+        //StartCoroutine(GameLoop());
     }
 
-    // Update is called once per frame
-    void Update()
+    private void SpawnAllTanks()
     {
-        
+
     }
+
+
+
+
+
 }

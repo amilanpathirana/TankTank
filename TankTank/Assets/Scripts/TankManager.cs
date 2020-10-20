@@ -1,18 +1,41 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using JetBrains.Annotations;
+using System;
+using System.Collections;
 using UnityEngine;
 
-public class TankManager : MonoBehaviour
+[Serializable]
+public class TankManager
 {
-    // Start is called before the first frame update
-    void Start()
+    public Color m_TankColor;
+    public Transform m_SpawnPoint;
+
+    [HideInInspector] public int m_TankrNumber;
+    [HideInInspector] public string m_ColoredPlayerText;
+    [HideInInspector] public GameObject m_Instance;
+    [HideInInspector] public int m_Wins;
+
+    private TankMovement m_Movement;
+    private TankShooting m_Shooting;
+    private GameObject m_CanvasGameObject;
+
+    public void Setup()
     {
-        
+        m_Movement = m_Instance.GetComponent<TankMovement>();
+        m_Shooting = m_Instance.GetComponent<TankShooting>();
+        m_CanvasGameObject = m_Instance.GetComponentInChildren<Canvas>().gameObject;
+
+        m_Movement.m_TankNumber = m_TankrNumber;
+        m_Shooting.m_TankNumber = m_TankrNumber;
+        m_ColoredPlayerText = "<color=#" + ColorUtility.ToHtmlStringRGB(m_TankColor) + ">TANK" + m_TankrNumber + "</color>";
+        SpriteRenderer renderers = m_Instance.GetComponent<SpriteRenderer>();
+        renderers.color = m_TankColor;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        public void DisableControl()
+        {
+
+        }
+
+    
+
 }
