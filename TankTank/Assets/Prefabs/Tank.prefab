@@ -797,13 +797,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38897ff86485fac4d8e806be6860b4ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlayerNumber: 1
-  m_Shell: {fileID: 0}
-  m_FireTrransform: {fileID: 0}
-  m_AimSlider: {fileID: 0}
-  m_ShootingAudio: {fileID: 0}
-  m_ChargingClip: {fileID: 0}
-  m_FireClip: {fileID: 0}
+  m_TankNumber: 1
+  m_Shell: {fileID: 5153412371679587602, guid: aa8a9086411d7594096a33fe59b26147, type: 3}
+  m_FireTrransform: {fileID: 961143362671310147}
+  m_ShootingAudio: {fileID: 1971696111358645925}
+  m_ChargingClip: {fileID: 8300000, guid: 0e552b02a3480084db67a895c76e3dad, type: 3}
+  m_FireClip: {fileID: 8300000, guid: ff2d572763e26104089479b47f9ca964, type: 3}
   m_MinLaunchForce: 1
   m_MaxLaunchForce: 30
   m_MaxChargeTime: 0.75
